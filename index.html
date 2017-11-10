@@ -11,8 +11,8 @@
 	<meta name="author" content="Múltipla" />
 
 	<!--Favicon-->
-	<link rel="icon" type="image/png" href="/images/LOGO.png">
-	<link rel="shortcut icon" href="/images/LOGO.png">
+	<link rel="icon" type="image/png" href="img/logo.png">
+	<link rel="shortcut icon" href="img/logo.png">
 
 
 	<!--Fonts-->
@@ -20,16 +20,16 @@
 	<link href='https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700' rel='stylesheet' type='text/css'>
 
 	<script>
-                (function (i, s, o, g, r, a, m) {
-                        i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
-                                (i[r].q = i[r].q || []).push(arguments)
-                        }, i[r].l = 1 * new Date(); a = s.createElement(o),
-                                m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
-                })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+		(function (i, s, o, g, r, a, m) {
+			i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+				(i[r].q = i[r].q || []).push(arguments)
+			}, i[r].l = 1 * new Date(); a = s.createElement(o),
+				m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+		})(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
 
-                ga('create', 'UA-90481486-1', 'auto');
-                ga('send', 'pageview');
-        </script>
+		ga('create', 'UA-90481486-1', 'auto');
+		ga('send', 'pageview');
+	</script>
 
 
 	<!--CSS-->
@@ -68,11 +68,11 @@
 							<!--Counter-->
 							<h5>
 								<span id="countdown">
-										<!--<span class="days-wrap">
+									<!--<span class="days-wrap">
 										   <span class="days">50</span>
 								<span>days</span>
 								</span>-->
-								<span>Em desenvolvimento, aguarde...</span>
+									<span>Em desenvolvimento, aguarde...</span>
 								</span>
 							</h5>
 							<!--/Counter-->
@@ -104,10 +104,10 @@
 
 							<!--Notify Button-->
 							<span class="btn btn-default md-trigger margin-top-35" data-modal="modal-2">
-									<span class="mask"></span>
-							<span class="btn-label">
-										<b>Inscrever</b>
-									</span>
+								<span class="mask"></span>
+								<span class="btn-label">
+									<b>Inscrever</b>
+								</span>
 							</span>
 							<!--/Notify Button-->
 
@@ -131,12 +131,14 @@
 						<div class="tablecell">
 							<h2>Somos a Múltipla</h2>
 							<p class="margin-bottom-25">Comércio Catarinense de Produtos para Diagnóstico e distribuidores da InVitro para Santa Catarina.</p>
-							<p><img src="img/invitro.jpg" alt="logo" /></p>
+							<p>
+								<img src="img/invitro.jpg" alt="logo" />
+							</p>
 							<span id="goto_contact" class="btn btn-default alternate-bg margin-top-25">
-									<span class="mask"></span>
-							<span class="btn-label">
-										<b>contato</b>
-									</span>
+								<span class="mask"></span>
+								<span class="btn-label">
+									<b>contato</b>
+								</span>
 							</span>
 						</div>
 					</div>
@@ -153,7 +155,9 @@
 		<!--Contact Section-->
 		<div class="page page-right">
 			<div class="page-inner full-height">
-				<div class="close-btn"><span>X</span></div>
+				<div class="close-btn">
+					<span>X</span>
+				</div>
 
 				<!--Contact Sec-->
 				<section class="col-lg-12 padding-zero contact-sec">
@@ -161,40 +165,40 @@
 					<div class="col-md-6 contact-sec-wrap padding-left-75 padding-right-75 padding-left-sm-40 padding-right-sm-40 sec-pad sec-pad-sm sec-pad-xs">
 						<div class="table-wrap">
 							<div class="tablecell">
-								<div data-ng-controller="ContactController">
-									<form data-ng-submit="submit(contactform, $event)" name="contactform" method="post" class="form-horizontal" role="form">
+								<div>
+									<form id="contatoForm" class="form-horizontal" role="form">
 
 										<!--Contact Form-->
 										<div class="contact-form-wrap">
 											<div class="row">
-												<div class="col-sm-6 form-group margin-bottom-30" data-ng-class="{ 'has-error': contactform.inputEmail.$invalid && submitted }">
+												<div class="col-sm-6 form-group margin-bottom-30">
 													<div class="input-wrap">
-														<input data-ng-model="formData.inputEmail" type="email" class="form-control input input__field " placeholder="Email*" id="inputEmail"
-														 name="inputEmail" required>
+														<input type="email" class="form-control input input__field " placeholder="Email*" id="email" name="email" required>
 													</div>
 												</div>
-												<div class="col-sm-6 form-group margin-bottom-30" data-ng-class="{ 'has-error': contactform.inputSubject.$invalid && submitted }">
+												<div class="col-sm-6 form-group margin-bottom-30">
 													<div class="input-wrap">
-														<input data-ng-model="formData.inputSubject" type="text" class="form-control input__field input " id="inputSubject" name="inputSubject"
-														 placeholder="Assunto*" required>
+														<input type="text" class="form-control input__field input" id="assunto" name="assunto" placeholder="Assunto*" required>
 													</div>
 												</div>
-												<div class="col-sm-12 form-group margin-bottom-30 " data-ng-class="{ 'has-error': contactform.inputMessage.$invalid && submitted }">
+												<div class="col-sm-12 form-group margin-bottom-30">
 													<div class="input-wrap">
-														<textarea data-ng-model="formData.inputMessage" class="form-control input input__field " rows="4" id="inputMessage" name="inputMessage"
-														 placeholder="Menssagem*" required></textarea>
+														<textarea class="form-control input input__field " rows="4" id="mensagem" name="mensagem" placeholder="Menssagem*" required></textarea>
 													</div>
 												</div>
 												<div class="form-group col-sm-12 col-xs-12 margin-bottom-10">
 													<div class="align-center">
-														<button type="submit" class="btn btn-default" data-ng-disabled="submitButtonDisabled">
+														<button type="submit" class="btn btn-default">
 															<span class="mask"></span>
 															<span>enviar menssagem</span>
-															</button>
+														</button>
 													</div>
 												</div>
 											</div>
-											<p class="margin-top-10 alert alert-success center-align" data-ng-class="result">{{ resultMessage }}</p>
+											<div class="alert alert-success center-align" id="contatoSucesso" hidden>
+												<button type="button" class="close" data-dismiss="alert">x</button>
+												Contato recebido, aguarde nosso retorno.
+											</div>
 											<div class="address-details margin-top-50">
 												<div class="row">
 													<div class="col-sm-4  margin-bottom-xs-50">
@@ -215,7 +219,6 @@
 												</div>
 											</div>
 										</div>
-										<!--/Contact Form-->
 
 									</form>
 								</div>
@@ -244,19 +247,24 @@
 	<div class="md-modal md-effect-2" id="modal-2">
 		<div class="md-content notify-cmpt notify-form-type-3">
 			<div class="md-content-wrap notify-wrap">
-				<div class="md-close" id="notify_close"><span>X</span></div>
+				<div class="md-close" id="notify_close">
+					<span>X</span>
+				</div>
 				<h2>Informe o seu email e receba nossas novidades!</h2>
-				<div data-ng-controller="SubscribeController">
-					<form data-ng-submit="submit(contactform, $event)" name="contactform" method="post" class="contact-form" role="form">
+				<div>
+					<form class="contact-form" id="inscricaoForm" role="form">
 						<div class="input-wrap">
 							<input class="col-lg-10  align-center form-control input notify-input-box" name="email" placeholder="Seu email" type="email"
-							 data-ng-model="formData.email" id="email" required>
+							 id="email" required>
 							<div class="clearfix"></div>
-							<button type="submit" class="btn btn-default progress-button btn-submit align-center" data-ng-disabled="submitButtonDisabled">
+							<button type="submit" class="btn btn-default progress-button btn-submit align-center">
 								Enviar
 								<span class="mask"></span>
 							</button>
-							<p class="alert alert-success margin-top-10" data-ng-class="result">{{ resultMessage }}</p>
+							<div class="alert alert-success center-align margin-top-10" id="inscricaoSucesso" hidden>
+								<button type="button" class="close" data-dismiss="alert">x</button>
+								Inscrição recebida com sucesso.
+							</div>
 						</div>
 					</form>
 				</div>
@@ -269,13 +277,9 @@
 
 	<!-- Scripts -->
 	<script src="js/jquery-1.11.3.min.js"></script>
-	<script src="js/angular.min.js"></script>
 	<script src="js/modernizr.custom.js"></script>
 	<script src="js/classie.js"></script>
-	<script src="js/cbpSplitLayout.js"></script>
 	<script src="js/jquery.countdown.js"></script>
-	<script src="js/app.js"></script>
-	<script src="js/controllers.js"></script>
 	<script src="js/owl.carousel.min.js"></script>
 	<script src="js/input-text.js"></script>
 	<script src="js/notifyMe.js"></script>
@@ -287,6 +291,8 @@
 	<script src="js/modalEffects.js"></script>
 	<script src="js/particles.min.js"></script>
 	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBxXt2P7-U38bK0xEFIT-ebZJ1ngK8wjww"></script>
+	<script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 	<script src="js/init.js"></script>
 </body>
 

@@ -27,6 +27,30 @@ $(document).ready(function () {
 	$('.la-anim-1').addClass('la-animate');
 	$('body').niceScroll({ cursorcolor: "#333333" });
 	beryl();
+
+	emailjs.init("user_Uhl6m6oDfCVYoTb0ZTrlQ");
+
+	$("#contatoForm").submit(function (e) {
+		e.preventDefault();
+		//emailjs.sendForm("zoho", "contato", "contatoForm");
+
+		$("#contatoSucesso").fadeTo(4000, 500).slideUp(500, function () {
+			$("#contatoSucesso").slideUp(500);
+		});
+		this.reset();
+	});
+
+	$("#inscricaoForm").submit(function (e) {
+		e.preventDefault();
+		emailjs.sendForm("zoho", "inscricao", "inscricaoForm");
+		this.reset();
+
+		$("#inscricaoSucesso").fadeTo(4000, 500).slideUp(500, function () {
+			$("#inscricaoSucesso").slideUp(500);
+			$("#notify_close").click();
+		});
+
+	});
 });
 /*****Ready function end*****/
 
