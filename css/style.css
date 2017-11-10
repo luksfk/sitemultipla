@@ -460,8 +460,8 @@ p {
   100% {
     transform: scale(1); } }
 .page .close-btn {
-  position: fixed;
-  right: 40px;
+  position: absolute;
+  left: 40px;
   top: 25px;
   font-size: 20px;
   color: #333333;
