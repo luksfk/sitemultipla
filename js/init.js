@@ -32,7 +32,7 @@ $(document).ready(function () {
 
 	$("#contatoForm").submit(function (e) {
 		e.preventDefault();
-		//emailjs.sendForm("zoho", "contato", "contatoForm");
+		emailjs.sendForm("zoho", "contato", "contatoForm");
 
 		$("#contatoSucesso").fadeTo(4000, 500).slideUp(500, function () {
 			$("#contatoSucesso").slideUp(500);
