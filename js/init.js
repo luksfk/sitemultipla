@@ -259,8 +259,8 @@ function beryl() {
 	/* Map initialization js*/
 	if ($('#map_canvas').length > 0) {
 		var settings = {
-			zoom: 16,
-			center: new google.maps.LatLng(-26.518972, -49.129812),
+			zoom: 19,
+			center: new google.maps.LatLng(-26.4494631,-49.0512857),
 			mapTypeControl: true,
 			scrollwheel: true,
 			draggable: true,
@@ -294,7 +294,7 @@ function beryl() {
 			new google.maps.Point(0, 0),
 			new google.maps.Point(35, 20)
 		);
-		var companyPos = new google.maps.LatLng(-26.518972, -49.129812);
+		var companyPos = new google.maps.LatLng(-26.4495329,-49.0510677);
 		var companyMarker = new google.maps.Marker({
 			position: companyPos,
 			map: map,
